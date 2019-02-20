@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Remont</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<script>
+
+</script>
+<!--  header  -->
+<div id="header_fixed">
+    <header class="header wrapper ">
+        <div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<a href="/" class="logo"><img src="img/logo.png" alt="" /></a>
+				</div>
+				<div class="col-md-3">
+					<div class="header-phone">
+						<span>Телефон для связи</span>
+						<a href="tel:+7(495) 480-07-80" class="phone">+7 (495) 480-07-80</a>
+						<a href="#" class="backtocall">Заказать обратный звонок</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="header-time">			
+						<span>Режим работы</span>
+						<strong>10:00 - 21:00</strong>
+						<span class="day">Понедельник - Воскресенье</span>
+						<button type="button" class="btn btn-outline-red container-fluid">Заказать услугу</button>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-dark bg-red navbar-expand-lg">
+			<div class="container">
+				<ul class="nav">
+				  <li class="nav-item">
+					<a class="nav-link " href="#">все услуги</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">ремонт квартир</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">дизайн интерьера</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">статьи</a>
+				  </li>
+				   <li class="nav-item">
+					<a class="nav-link active" href="#">контакты</a>
+				  </li>
+				  
+				</ul>
+				<button type="button" class="btn btn-outline-white  col-md-3 container-fluid">Заказать услугу</button>
+			</div>
+		</nav>
+     </header>
+</div>
+<div class="content">
+<div class="container ">
+	<div id="calc_block_form">
+	<div class="message_box"></div>
+	<form action="#" method="post" enctype="multipart/form-data" id="calc_form">
+	<input type="hidden" name="sessid" id="sessid" value="" />
+		<section class="calc">
+			<h1 class="bold">Калькулятор стоимости ремонта</h1>
+			<div class="description"><p>Введите размеры комнат, выберите материалы и услуги и получите расчёт стоимости работ по ремонту вашей квартиры &laquo;под ключ&raquo;. Смета будет прикреплена к вашему заказу.
+</p></div>
+			<div class="block_radio">
+				<label><input type="radio" name="prop[TOP][T_APPART]" checked value="new"/>Новостройка</label>
+				<label><input type="radio" name="prop[TOP][T_APPART]"  value="old"/>Вторичное жилье</label>
+			</div>
+		
+			<div class="input_b">
+				<span class="txt_t_calc">Высота потолков</span>
+				<input type="text" name="prop[TOP][H_ROOM]" value="2.8">
+				<span class="txt_t_calc">м</span>
+			</div>
+		</section>
+		<section class="wrap_calc_b_2 calc calc_main">
+				<div class="wrap_room_block">
+			<div class="block_calc var_b_calc">
+			<!--	<div class="select_room_block">
+					<span class="down active"></span>
+					<span class="up"></span>
+				</div>  -->
+					<select name="prop[ROOMS][SIZES][T_ROOM]" class="form-control">
+											<option value="">Выберите комнату</option>
+											<option  value="Ванная">Ванная</option>
+											<option  value="Гостиная">Гостиная</option>
+											<option  value="Кладовка">Кладовка</option>
+											<option  value="Комната">Комната</option>
+											<option  value="Кухня">Кухня</option>
+											<option  value="Прихожая">Прихожая</option>
+											<option  value="Туалет">Туалет</option>
+					
+					</select>
+				<!--<span class="close"></span>-->
+			</div>
+			<div class="room_block">
+				<div class="block_calc">
+					<div class="container">
+					
+					<div class="title_calc">Размеры комнаты</div>
+					<div class="row">
+					<div class="input_b size_pom_b dis_ib">
+						<span class="txt_t_calc">Длина</span>
+						<input type="text" name="prop[ROOMS][SIZES][L_ROOM]" value="">
+						<span class="txt_t_calc">м</span>
+					</div>
+					<div class="input_b size_pom_b dis_ib">
+						<span class="txt_t_calc">Ширина</span>
+						<input type="text" name="prop[ROOMS][SIZES][W_ROOM]" value="">
+						<span class="txt_t_calc">м</span>
+					</div>
+
+					<div class="input_b size_pom_b dis_ib">
+						<span class="txt_t_calc">или</span>
+					</div>
+					<div class="input_b size_pom_b dis_ib">
+						<span class="txt_t_calc">Площадь</span>
+						<input type="text" name="prop[ROOMS][SIZES][S_ROOM]" value="">
+						<span class="txt_t_calc">м²</span>
+					</div>
+					</div>
+
+				</div>
+				<div class="block_calc">
+					<div class="title_calc">Отделка</div>
+						<div class="wrap_rooms">
+							<div class="txt_t_calc">Пол</div>
+							<select name="prop[ROOMS][flor]" class="form-control">
+																											
+									<option value="1" >Керамическая плитка</option>
+																																												
+									<option value="2" >Керамическая мозаика</option>
+																																												
+									<option value="3" >Керамогранит</option>
+																																												
+									<option value="4" >Ламинат</option>
+																																												
+									<option value="5" >Пробковое покрытие на клею</option>
+																																												
+									<option value="6" >Массивная доска</option>
+							</select>
+						</div>
+						<div class="wrap_rooms">
+							<div class="txt_t_calc">Стены</div>
+							<select name="prop[ROOMS][wall]" class="form-control">
+																											
+									<option value="1" >Обои</option>
+																																												
+									<option value="2" >Окраска</option>
+																																												
+									<option value="3" >Керамическая плитка</option>
+																																												
+									<option value="4" >Керамогранит</option>
+																																												
+									<option value="5" >Обои+покраска</option>
+																																												
+									<option value="6" >Декоративная штукатурка</option>
+
+							</select>
+						</div>
+						<div class="wrap_rooms">
+							<div class="txt_t_calc">Потолок</div>
+							<select name="prop[ROOMS][ceiling]" class="form-control">
+																											
+									<option value="1" >Натяжной</option>
+																																												
+									<option value="2" >Оштукатуривание и окраска</option>
+																																												
+									<option value="3" >Гипсокартон (1 уровень)</option>
+																																												
+									<option value="4" >Гипсокартон (2 уровня)</option>
+																																												
+									<option value="5" >Реечный / ПВХ панели</option>
+									
+							</select>
+						</div>	
+				</div>
+			</div>
+		</div>
+			<!--	<button class=" red bold show_more_news add_room">Добавить ещё комнату</button>-->
+	</section>
+	<section class="calc">
+			<div class="block_calc block_calc_2">
+					<div class="title">Сантехнические работы</div>
+										
+						<div class="colum_form b_dr dis_ib">
+															<div class="input_b">
+									<span class="label_dr">Монтаж раковины</span>
+									<input type="text" name="prop[ADDITIONAL][10]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Монтаж ванны</span>
+									<input type="text" name="prop[ADDITIONAL][11]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+				
+
+															<div class="input_b">
+									<span class="label_dr">Монтаж унитаза</span>
+									<input type="text" name="prop[ADDITIONAL][12]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Монтаж полотенцесушителя</span>
+									<input type="text" name="prop[ADDITIONAL][13]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Монтаж инсталляции</span>
+									<input type="text" name="prop[ADDITIONAL][14]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+											
+													</div>											
+						<div class="colum_form b_dr dis_ib">
+															<div class="input_b">
+									<span class="label_dr">Подключение стиральной машины</span>
+									<input type="text" name="prop[ADDITIONAL][15]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Монтаж радиаторов отопления</span>
+									<input type="text" name="prop[ADDITIONAL][16]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+												</div>	
+					</div>
+							<div class="block_calc block_calc_2">
+					<div class="title">Электромонтажные работы</div>
+										
+						<div class="colum_form b_dr dis_ib">
+															<div class="input_b">
+									<span class="label_dr">Сборка и монтаж электрощита</span>
+									<input type="text" name="prop[ADDITIONAL][20]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Монтаж электроточки</span>
+									<input type="text" name="prop[ADDITIONAL][21]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Монтаж точечного светильника</span>
+									<input type="text" name="prop[ADDITIONAL][22]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Монтаж люстры</span>
+									<input type="text" name="prop[ADDITIONAL][23]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+													</div>											
+						<div class="colum_form b_dr dis_ib">
+												
+																								
+						
+								
+															<div class="input_b">
+									<span class="label_dr">Монтаж теплого пола</span>
+									<input type="text" name="prop[ADDITIONAL][24]" value="">									<span class="label_dr_2">м²</span>
+								</div>
+													</div>															</div>
+							<div class="block_calc block_calc_2">
+					<div class="title">Дополнительные услуги</div>
+										
+						<div class="colum_form b_dr dis_ib">
+															<div class="block_check">
+									<input type="checkbox" id="checkbox_di_135" name="prop[ADDITIONAL][30]"  value="1">
+														 <label for="checkbox_di_135">Установка входной двери</label>								</div>
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Установка межкомнатных дверей</span>
+									<input type="text" name="prop[ADDITIONAL][31]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Установка пластиковых окон</span>
+									<input type="text" name="prop[ADDITIONAL][32]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+																								
+						
+															<div class="input_b">
+									<span class="label_dr">Монтаж кондиционера </span>
+									<input type="text" name="prop[ADDITIONAL][33]" value="">									<span class="label_dr_2">шт.</span>
+								</div>
+																								
+						
+																								
+						
+												
+													</div>											
+						<div class="colum_form b_dr dis_ib">
+															
+																							
+															<div class="input_b">
+									<span class="label_dr">Возведение стен из блока</span>
+									<input type="text" name="prop[ADDITIONAL][34]" value="">									<span class="label_dr_2">м²</span>
+								</div>
+																								
+						
+
+													</div>															</div>
+						</section>
+	<section class="calcResult">
+		<div class="block_but dis_ib calc_block_but calc_block_1">
+		<!--	<a href="#" class="button calc_btn dis_ib" onclick="yaCounter36817690.reachGoal('knopkaRasschetKalkulyator'); return true;">РАССЧИТАТЬ СТОИМОСТЬ</a>-->
+			<button class="button calc_btn dis_ib" id="calculate" onclick="sendAjaxForm()"> РАССЧИТАТЬ СТОИМОСТЬ</button>
+		</div>
+
+		
+		<div class="block_but calc_block_but">
+			<div class="text_b1">Ориентировочная стоимость -
+				<span id="calc_price">0 р.</span>
+			</div>
+		</div>
+	</section>
+	<input type="hidden" name="action" value="1"/>
+</form>
+</div>
+
+
+</div>
+		
+
+	<div id="footer">
+			<nav class="navbar navbar-dark bg-red navbar-expand-lg">
+			<div class="container">
+				<ul class="nav">
+				  <li class="nav-item">
+					<a class="nav-link " href="#">все услуги</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">ремонт квартир</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">дизайн интерьера</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">статьи</a>
+				  </li>
+				   <li class="nav-item">
+					<a class="nav-link active" href="#">контакты</a>
+				  </li>
+				  
+				</ul>
+				
+				<div class="header-phone">
+						<a href="tel:+7(495) 480-07-80" class="phone">+7 (495) 480-07-80</a>
+						<a href="#" class="backtocall">Заказать обратный звонок</a>
+					</div>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" ></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
